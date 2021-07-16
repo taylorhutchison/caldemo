@@ -9,7 +9,7 @@ export class DateMathService {
   constructor() { }
 
 
-  days(firstDayOfMonth: Readonly<Date>): any[] {
+  days(firstDayOfMonth: Readonly<Date>): { isCurrentMonth: boolean, date: Date } [] {
     const days = [];
     //Initialize date object with first day of the month
     const startDate = new Date(firstDayOfMonth);

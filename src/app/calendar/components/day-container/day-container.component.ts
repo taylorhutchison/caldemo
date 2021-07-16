@@ -1,9 +1,10 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectionStrategy, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-day-container',
   templateUrl: './day-container.component.html',
-  styleUrls: ['./day-container.component.scss']
+  styleUrls: ['./day-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DayContainerComponent implements OnInit {
 
@@ -13,7 +14,9 @@ export class DayContainerComponent implements OnInit {
   @Input()
   selected: boolean = false;
 
-  constructor() { }
+  constructor() { 
+    console.log('drawing');
+  }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,7 @@
 <div class="days">
-    <app-day-container *ngFor="let dayConfig of daysToShow" [config]="dayConfig" (click)="selectDay(dayConfig)">
-                
+    <app-day-container *ngFor="let dayConfig of daysToShow" [config]="dayConfig" [selected]="isSelected(dayConfig)" (click)="selectDay(dayConfig)">
+        <div>
+            {{dayConfig.data?.authorized}}
+        </div>
     </app-day-container>
 </div>

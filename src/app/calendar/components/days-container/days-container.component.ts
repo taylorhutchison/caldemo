@@ -1,14 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-days-container',
   templateUrl: './days-container.component.html',
-  styleUrls: ['./days-container.component.scss']
+  styleUrls: ['./days-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DaysContainerComponent implements OnInit {
 
   @Input()
   daysToShow: any | null = null;
+
+  selectedDay: Date | null = null;
 
   constructor() { }
 
@@ -16,6 +19,11 @@ export class DaysContainerComponent implements OnInit {
   }
 
   selectDay(dayConfig: any): void {
+    this.selectedDay = new Date(dayConfig.date);
+  }
+
+  isSelected(dayConfig: any): boolean {
+    return this.selectedDay != null && this.selectedDay.getTime() == dayConfig.date.getTime();
   }
 
 }
