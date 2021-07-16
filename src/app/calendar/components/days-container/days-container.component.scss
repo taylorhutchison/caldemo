@@ -1,0 +1,9 @@
+app-day-container {
+    display:block;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height:100%;
+}

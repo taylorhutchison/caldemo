@@ -1,0 +1,17 @@
+<div class="calendar-border">
+    <div class="calendar-nav">
+        <div class="calendar-nav-left calbtn" (click)="prevMonth()">Prev</div>
+        <div class="date">{{currentMonth}}</div>
+        <div class="calendar-nav-right calbtn" (click)="nextMonth()">Next</div>
+    </div>
+    <div class="daynames">
+        <span>Sun</span>
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+    </div>
+    <app-days-container [daysToShow]="daysToShow"></app-days-container>
+</div>

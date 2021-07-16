@@ -1,0 +1,58 @@
+.calendar-border {
+    border: 1px solid #000;
+    height:100%;
+}
+
+.calendar-nav {
+    height: 50px;
+    background: #11479F;
+    display:flex;
+    justify-content: space-between;
+    line-height:50px;
+    padding:0 10px;
+    color:white;
+    font-weight: bold;
+}
+
+.calbtn {
+    cursor: pointer;
+}
+
+.daynames {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height:30px;
+    line-height:30px;
+    background-color: #D0D8DD;
+    span {
+        font-size:1.5rem;
+    }
+}
+
+app-days-container {
+    display:block;
+    height: calc(100% - 80px);
+}
+
+
+
+$unnamed-color-747474: #747474;
+$-primary-blue-11479f-blue-900: #11479F;
+$-accent-blue-2e78f9-blue-a400: #2E78F9;
+$-warn-d32f2f-red-700: #D32F2F;
+$-warning-fe8e2f-orange-a400: #FE8E2F;
+$green-accent-5ef500-non-mat-color-: #5EF500;
+$-materials-0196a6-cyan-700: #0196A6;
+$-materials-dark-005f63-cyan-900: #005F63;
+$-subscriptions-536d79-blue-gray-600: #536D79;
+$-synching-blue-778f9b-blue-gray-400: #778F9B;
+$-contracts-bookmark-afbdc4-blue-gray-200: #AFBDC4;
+$bg-color-d0d8dd-blue-gray-100: #D0D8DD;
+$-other-5e36af-purple-600: #5E36AF;
+$box-navs: #FFFFFF;
+$unnamed-color-ffffff: #FFFFFF;
+$unnamed-color-f5f5f5: #F5F5F5;
+$unnamed-color-c4c4c4: #C4C4C4;
+$cal-read-only-9d9d9d: #9D9D9D;
+$unnamed-color-707070: #707070;
+$unnamed-color-000000: #000000;
